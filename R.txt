@@ -1,0 +1,83 @@
+#Comandos R#
+
+ls() -> Mostra as variáveis existentes.
+rm(variavel) -> Remove a variável citada.
+rm(list = ls()) -> Remove TODAS as variáveis.
+
+class(dado) -> Informa o tipo de dado.
+#Para o número ser interpretado como inteiro, é necessário colocar "L" na frente -> "4L".
+ 
+*************************************************************************************************************************
+
+#Verificação de dados
+
+is.integer(dado) -> Se o dado é inteiro
+is.numeric(dado) -> Se o dado é flutuante
+is.logical(dado) -> Se o dado é Vdd ou Falso
+is.character(dado) -> Se o dado é um texto
+is.double(dado) -> Se o dado é de dupla precisão 
+(Retorna valor booleano)
+
+*************************************************************************************************************************
+
+#Conversão de dados
+
+as.integer(dado) -> Converte o dado para inteiro
+as.numeric(dado) -> Converte o dado para flutuante
+as.logical(dado) -> Converte o dado para booleano
+as.character(dado) -> Converte o dado para texto
+as.double(dado) -> Converte o dado para dupla precisão
+
+*************************************************************************************************************************
+
+id <- c(1, 2, 3, 4, 5)
+
+id # Retorna o vetor inteiro.
+id[2] # Retorna a segunda posição do vetor.
+
+#TODAS as variáveis são tratadas como vetor no R.
+
+*************************************************************************************************************************
+
+#Nomeando Vetores
+
+dias <- c(1, 2, 3, 4, 5, 6, 7)
+nomeSemana <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo")
+
+names(dias) <- nomeSemana
+
+#Dessa forma a informação pode ser buscada tanto pelo resultado, como pelo nome.
+
+*************************************************************************************************************************
+
+#Selecionando dados nos vetores.
+
+numeros <- c(1:6)
+
+numeros[c(TRUE,FALSE)]
+#Dessa forma mostra o primeiro, pula o segundo e repete a ação até o final do vetor.
+
+*************************************************************************************************************************
+
+#OPERAÇÕES MATEMÁTICAS EM VETORES só funcionam se o número de elementes forem iguais ou múltiplos.
+
+*************************************************************************************************************************
+
+#ADICIONANDO E REMOVENDO ELEMENTOS EM VETORES
+
+#adicionando por direcionamento direto | id <- c(1, 2, 3, 4, 5) | id[6] <- 6
+
+#Usando o tamanho do vetor como parametro | id(length(id) + 1 <- 7
+
+#Adicionando os valores em outro vetor | id <- c(id, 8)
+
+#REMOVENDO ELEMENTOS
+
+id[-3] #Oculta o dado do vetor.
+id <- id[-3] #Com a atribuição, remove.
+
+id[-c(1:3)] #Retorna o vetor sem o intervalo informado.
+
+*************************************************************************************************************************
+
+
