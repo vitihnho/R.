@@ -48,8 +48,6 @@ names(dias) <- nomeSemana
 
 #Dessa forma a informação pode ser buscada tanto pelo resultado, como pelo nome.
 
-*************************************************************************************************************************
-
 #Selecionando dados nos vetores.
 
 numeros <- c(1:6)
@@ -57,11 +55,7 @@ numeros <- c(1:6)
 numeros[c(TRUE,FALSE)]
 #Dessa forma mostra o primeiro, pula o segundo e repete a ação até o final do vetor.
 
-*************************************************************************************************************************
-
 #OPERAÇÕES MATEMÁTICAS EM VETORES só funcionam se o número de elementes forem iguais ou múltiplos.
-
-*************************************************************************************************************************
 
 #ADICIONANDO E REMOVENDO ELEMENTOS EM VETORES
 
@@ -78,6 +72,56 @@ id <- id[-3] #Com a atribuição, remove.
 
 id[-c(1:3)] #Retorna o vetor sem o intervalo informado.
 
+#COERÇÃO DE DADOS EM VETORES
+
+#Vetor só pode ter um tipo de dado, então ele vai convertendo os dados utilizando o último adicionado como parâmetro. 
+
 *************************************************************************************************************************
+
+#MATRIZ - DIVIDIR O VETOR EM LINHAS E COLUNAS.
+
+matrix(data, nrow=[qt, Linhas], ncol=[qt, Colunas], byrow = [F ou T], dimnames = nomes)
+
+Exemplo: matrix(c(1:100)) -- # 1 coluna e 100 linhas
+	 matrix(c(1:100), 5) -- # 20 colunas e 5 linhas
+	 matrix(c(1:100), ncol = 5) -- # 5 colunas, 20 linhas
+
+#Se o número de linhas e colunas não forem múltiplos, os dados se repetem até preencher o valor que falta.
+#BYROW -> Quando é atribuído TRUE, os dados são distribuidos por linhas, já no caso de FALSE.. os dados são distribuidos por colunas.
+
+#RBIND e CBIND
+
+rbind(1:4, 2:5) -> Cria uma distribuição por linha
+cbind(1:4, 2:5) -> Cria uma distribuição por coluna
+
+#NOMEANDO MATRIZES
+
+colnames -> Nomeia as colunas
+rownames -> Nomeia as linhas
+
+#SELECIONANDO ELEMENTOS NAS MATRIZES
+
+#Seleção de valores -> matriz[1,1] -> Devolve o elemento na 1º linha e 1º coluna
+#Seleção de linhas -> matriz[1,] -> Devolve a linha
+#Seleção de colunas -> matriz[,1] -> Devolve a coluna
+
+#ADICIONANDO E REMOVENDO LINHAS/COLUNAS NA MATRIZ
+
+rbind(matriz, c(dados)) -> Adiciona nova linha.
+cbind(matriz, c(dados)) -> Adiciona nova coluna.
+matriz[c(-1,-2,-6),] -> Remove as linhas indicadas.
+
+#SOMANDO VALORES NA MATRIZ | colSums/rowSums
+
+sum(as.integer(matriz[])) -> É necessário que os dados sejam numéricos...
+colSums -> Soma os dados da coluna
+rolSums -> Soma os dados da linha
+
+
+
+
+
+
+
 
 
