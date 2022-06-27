@@ -187,6 +187,17 @@ df$id[1:3]
 df[df$id == 1,]
 df <- df[df$id == 1,]
 
+#Subset
+
+subset(dataframe, parametro pesquisado, local pesquisado)
+subset(dfDados, idade>50, select = c(nomes, idade))
+
+#Listas
+
+numeros <- 1:12
+matriz <- matrix(1:12, ncol=4)
+lista <- list(numeros, matriz)
+
 
 
 
