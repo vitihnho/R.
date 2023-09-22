@@ -202,7 +202,9 @@ lista <- list(numeros, matriz)
 
 dplyr::mutate(consolidado = paste0(coluna, sep = "|", lag(coluna)))
 
+#Concatenando todas as linhas de determinada coluna
 
+dplyr::mutate(consolidado = paste0(coluna, collapse = "|"))
 
 
 
