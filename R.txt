@@ -198,7 +198,9 @@ numeros <- 1:12
 matriz <- matrix(1:12, ncol=4)
 lista <- list(numeros, matriz)
 
+#Concatenando as linhas atual e anterior do BD
 
+dplyr::mutate(consolidado = paste0(coluna, sep = "|", lag(coluna)))
 
 
 
