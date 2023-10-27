@@ -206,5 +206,7 @@ dplyr::mutate(consolidado = paste0(coluna, sep = "|", lag(coluna)))
 
 dplyr::mutate(consolidado = paste0(coluna, collapse = "|"))
 
+#movendo coluna para o final do dt.frame
 
+select(-nome, everything())
 
