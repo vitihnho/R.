@@ -210,3 +210,7 @@ dplyr::mutate(consolidado = paste0(coluna, collapse = "|"))
 
 select(-nome, everything())
 
+#removendo zeros inicias da string
+
+contrato = sub("^0+","",contrato)
+
