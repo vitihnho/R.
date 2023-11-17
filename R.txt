@@ -214,3 +214,7 @@ select(-nome, everything())
 
 contrato = sub("^0+","",contrato)
 
+#Separando informações e replicando conteudo das colunas ate completar.
+
+tidyr::separate_rows(coluna, sep = "separador")
+
