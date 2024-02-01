@@ -218,3 +218,6 @@ contrato = sub("^0+","",contrato)
 
 tidyr::separate_rows(coluna, sep = "separador")
 
+#Exportando mais de uma aba por arquivo
+
+write.xlsx(setNames(list(base1, base2),c("nome1","nome2")),nome.xlsx)
