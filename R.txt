@@ -225,3 +225,11 @@ write.xlsx(setNames(list(base1, base2),c("nome1","nome2")),nome.xlsx)
 #Transformado caracter em minusculo
 
 tolower()
+
+#salvando arq com formatação
+
+wb <- createWorkbook()
+addWorksheet(wb, "Sheet1")
+
+writeData(wb, sheet = "Sheet1", x = ARQ, startCol = 1, startRow = 1)
+saveWorkbook(wb, "arquivo.xlsx")
