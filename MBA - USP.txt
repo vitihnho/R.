@@ -1,0 +1,3 @@
+AULA 01 - Introdução
+
+sqrt(x) <- Devolve a Raiz quadrada de um número.
