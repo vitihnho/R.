@@ -233,3 +233,7 @@ addWorksheet(wb, "Sheet1")
 
 writeData(wb, sheet = "Sheet1", x = ARQ, startCol = 1, startRow = 1)
 saveWorkbook(wb, "arquivo.xlsx")
+
+#validacao para olhar a linha debaixo
+
+mutate(x = lead(y),0,1)
