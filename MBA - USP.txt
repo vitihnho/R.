@@ -1,3 +1,7 @@
 AULA 01 - Introdução
 
 sqrt(x) <- Devolve a Raiz quadrada de um número.
+
+####Salvando BD no formato Rdata
+
+save(bd,file = 'nome.RData')
